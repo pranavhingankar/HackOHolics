@@ -7,8 +7,8 @@
 #include<MMsystem.h>
 #include<stdlib.h>
 #include<conio.h>
-int fav[15][13]={{1,0,0,0,0,0,0,0,1,0,1,1,0},{0,1,0,1,0,0,1,0,0,0,1,0,0}};
-int e,o,id=3,succ;
+int fav[15][13]={0};
+int e,o,id=1,succ;
 char user[20];
 int ch,chb;
 char pq;
@@ -31,6 +31,7 @@ void login()
         int count;
         string pass,u,p,password;
         system("cls");
+        system("COLOR E4");
          gotoxy(28,2);
         for(i=0;i<9;i++)
         {
@@ -114,6 +115,7 @@ void registr()
         int i;
         string reguser,regpass,ru,rp;
         system("cls");
+        system("COLOR E4");
          gotoxy(28,2);
         for(i=0;i<12;i++)
         {
@@ -135,6 +137,8 @@ void registr()
         }
 
         Sleep(500);
+        //gotoxy(30,3);
+        //cout<<"Please enter the following details"<<endl;
         gotoxy(24,6);
         cout<<"USERNAME :";
         gotoxy(24,8);
@@ -143,7 +147,7 @@ void registr()
         cin>>reguser;
         gotoxy(37,8);
         chb = _getch();
-   while(chb != 13){
+   while(chb != 13){//character 13 is enter
       regpass.push_back(chb);
       cout << '*';
       chb = _getch();
@@ -174,6 +178,7 @@ void first()
 {
     int i;
         int choice;
+        system("COLOR E4");
         gotoxy(22,2);
 for(i=0;i<37;i++)
    {
@@ -256,12 +261,12 @@ int main()
           break;
       }
       case 6:{
-         first();
+         credits();
          break;
       }
 
       case 7:{
-          credits();
+          first();
           break;
       }
       case 8:{
@@ -329,6 +334,7 @@ void gotoxy(int n,int m)
 
 void intro()
 {
+     system("COLOR E4");
      gotoxy(7,3);
     printf(" HH  HH      AAAA      CCCCCCC  K   KK   OOOOO    ...  HH  HH   OOOOO   LL        IIIIII   CCCCCCC  SSSSSSS");
     Sleep(100);
@@ -357,13 +363,14 @@ void intro()
     gotoxy(7,10);
     printf(" HH  HH   A        A   CC           K   O     O        HH  HH  O     O  LL          II     CC             S");
     Sleep(100);
-    getch();
     system("cls");
+
+
 }
 int mainmenu()
 {
     int a,i;
-system("COLOR 0");
+system("COLOR E4");
 /*gotoxy(18,1);
 cout<<"Hello "<<user<<"!!";*/
 gotoxy(18,2);
@@ -428,7 +435,7 @@ void allsongs()
 {
     int i;
 char men;
-system("COLOR 0");
+system("COLOR E4");
    gotoxy(18,2);
 for(i=0;i<29;i++)
    {
@@ -2821,7 +2828,7 @@ case 11:
        gotoxy(30,10);
        printf("2.Add To favourite list \n");
        Sleep(100);
-       gotoxy(30,12);
+             gotoxy(30,12);
        printf("3.Back\n");
        Sleep(100);
        gotoxy(15,14);
@@ -4994,6 +5001,7 @@ case 9:
 
 void bollywood(){
      int a,i;
+             system("COLOR E4");
      	    gotoxy(18,2);
 for(i=0;i<29;i++)
    {
@@ -6059,6 +6067,7 @@ case 6:
 
 void favourite(){
 	int i=0,j;
+	    system(" COLOR E4");
 		 gotoxy(18,2);
 for(j=0;j<29;j++)
    {
@@ -7647,6 +7656,7 @@ gotoxy(30,13);
 void allsonglist()
 {
     int j,i;
+            system(" COLOR E4");
   	 		 gotoxy(18,2);
 for(j=0;j<29;j++)
    {
@@ -7721,6 +7731,7 @@ gotoxy(18,4);
 void credits()
 {
     int i;
+    system("COLOR E4");
     gotoxy(4,3);
     for(i=0;i<37;i++)
     {
